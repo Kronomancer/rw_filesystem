@@ -1,0 +1,59 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Werror",
+      "-DDEBUG",
+      "-g",
+      "-D_FILE_OFFSET_BITS=64",
+      "-DMACOSX",
+      "-D__FreeBSD__=10",
+      "-c",
+      "-o",
+      "cpe453fs_main.o",
+      "cpe453fs_main.c"
+    ],
+    "directory": "/Users/alan/dev/Operating Systems/rw_filesystem",
+    "file": "/Users/alan/dev/Operating Systems/rw_filesystem/cpe453fs_main.c",
+    "output": "/Users/alan/dev/Operating Systems/rw_filesystem/cpe453fs_main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Werror",
+      "-DDEBUG",
+      "-g",
+      "-D_FILE_OFFSET_BITS=64",
+      "-DMACOSX",
+      "-D__FreeBSD__=10",
+      "-c",
+      "-o",
+      "hello_fs.o",
+      "hello_fs.cpp"
+    ],
+    "directory": "/Users/alan/dev/Operating Systems/rw_filesystem",
+    "file": "/Users/alan/dev/Operating Systems/rw_filesystem/hello_fs.cpp",
+    "output": "/Users/alan/dev/Operating Systems/rw_filesystem/hello_fs.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Werror",
+      "-DDEBUG",
+      "-g",
+      "-D_FILE_OFFSET_BITS=64",
+      "-DMACOSX",
+      "-D__FreeBSD__=10",
+      "-c",
+      "-o",
+      "implementation.o",
+      "implementation.c"
+    ],
+    "directory": "/Users/alan/dev/Operating Systems/rw_filesystem",
+    "file": "/Users/alan/dev/Operating Systems/rw_filesystem/implementation.c",
+    "output": "/Users/alan/dev/Operating Systems/rw_filesystem/implementation.o"
+  }
+]
