@@ -248,6 +248,13 @@ static int myreaddir(void *args, uint32_t block_num, void *buf, CPE453_readdir_c
 			continue;
 		}
 
+                struct DirectoryEntryHeader entry;
+                memcpy(&entry, region.data + i_region, sizeof(entry));
+                if (entry.inode == 0) {
+                        i_region += entry.length;
+                        continue;
+                }
+
 		size_t bytes_read = 0;
 		result = callback_directory_entry(&region.data[i_region], buf, cb, &bytes_read);
 		if (result)
@@ -621,6 +628,8 @@ static int remove_dir_entry(void *args, uint32_t dir_inode_num, const char *name
 			//	return -EINVAL;
 			//if (curr_block.type != TYPE_INODE && curr_block.type != TYPE_DIR_EXTENT)
 			//	return -EINVAL;
+
+                        dir_inode.actual_size -= entry.length;
 
 			entry.inode = 0;
 			memcpy(region.data + i_region, &entry, sizeof(entry));
