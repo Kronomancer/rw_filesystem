@@ -648,6 +648,9 @@ extern "C" {
 
 struct cpe453fs_ops *CPE453_get_operations(void)
 {
+        (void)allocate_block;
+        (void)free_block;
+
 	static struct cpe453fs_ops ops;
 	static struct Args args;
 	memset(&ops, 0, sizeof(ops));
